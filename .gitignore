@@ -1,37 +1,39 @@
-HELP.md
-.gradle
-build/
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
+# =====================
+# Backend (Spring Boot, Gradle)
+# =====================
+/backend/build/
+**/build/
+!backend/src/
+!backend/gradle/
+!backend/gradlew
+!backend/gradlew.bat
+!backend/build.gradle
+!backend/settings.gradle
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Gradle Wrapper 캐시
+.gradle/
 
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# IntelliJ IDEA 관련
+/.idea/
+/*.iml
+/out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# =====================
+# Frontend (SvelteKit, Node.js)
+# =====================
+/frontend/node_modules/
+/frontend/build/
+/frontend/.svelte-kit/
+/frontend/dist/
 
-### VS Code ###
-.vscode/
+# OS별 임시파일
+.DS_Store
+Thumbs.db
+
+# 로그파일
+*.log
+
+# 환경 변수 파일 (개인용)
+.env
+.env.local
+.env.*.local
