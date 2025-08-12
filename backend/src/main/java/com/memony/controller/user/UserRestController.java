@@ -18,13 +18,11 @@ public class UserRestController {
     private final CharacterService characterService;
 
     @GetMapping("/")
-    @ResponseBody
     public List<User> getUsers() {
         return userService.getUsers();
     }
 
     @GetMapping("/{id}/characters")
-    @ResponseBody
     public List<CharacterDto> getCharacters(@PathVariable Long id) {
         User user = userService.getUserById(id);
         return characterService.getCharacters(user);

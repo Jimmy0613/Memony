@@ -8,7 +8,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class CharacterListResponse {
+public class AccountListResponse {
 
     @JsonProperty("account_list")
     private List<AccountDto> accountList;

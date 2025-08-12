@@ -1,12 +1,11 @@
 package com.memony.service.user;
 
-import ch.qos.logback.core.util.StringUtil;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.memony.client.NexonApiClient;
 import com.memony.dto.user.AccountDto;
 import com.memony.dto.user.CharacterDto;
-import com.memony.dto.user.CharacterListResponse;
+import com.memony.dto.user.AccountListResponse;
 import com.memony.entity.user.User;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -35,7 +34,7 @@ public class CharacterService {
         String result = nexonApiClient.getCharacters(apiKey);
 
         try {
-            CharacterListResponse response = objectMapper.readValue(result, CharacterListResponse.class);
+            AccountListResponse response = objectMapper.readValue(result, AccountListResponse.class);
 
             for (AccountDto account : response.getAccountList()) {
                 allCharacters.addAll(
